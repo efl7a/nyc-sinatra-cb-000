@@ -1,0 +1,10 @@
+<h1>Historical Landmarks</h1>
+<ol>
+<% @landmarks.each do |landmark| %>
+  <li><a href="/landmarks/<%= landmark.id %>"><%= landmark.name %></a> completed in <%= landmark.year_completed %></li>
+  <br>
+<% end %>
+</ol>
+<form action="landmarks/new" method="GET">
+<input type="Submit" value="Create New Landmark"/>
+</form>
